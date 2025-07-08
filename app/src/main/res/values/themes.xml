@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="OneUITheme">
+        <item name="switchStyle">@style/AppTheme.Switch.Light</item>
+        <item name="seekBarStyle">@style/AppTheme.SeekBar.Light</item>
+    </style>
+
+    <style name="AppTheme.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">?attr/listPreferredItemHeight</item>
+    </style>
+
+    <style name="AppTheme.Switch.Light" parent="Widget.AppCompat.Light.CompoundButton.Switch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">?attr/listPreferredItemHeight</item>
+    </style>
+
+    <style name="AppTheme.SeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:minHeight">?listPreferredItemHeight</item>
+        <item name="android:paddingStart">?listPreferredItemPaddingStart</item>
+        <item name="android:paddingEnd">?listPreferredItemPaddingEnd</item>
+    </style>
+
+    <style name="AppTheme.SeekBar.Light" parent="Widget.AppCompat.Light.SeekBar">
+        <item name="android:minHeight">?listPreferredItemHeight</item>
+        <item name="android:paddingStart">?listPreferredItemPaddingStart</item>
+        <item name="android:paddingEnd">?listPreferredItemPaddingEnd</item>
+    </style>
+</resources>
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.oneuiproject.oneui.layout.ToolbarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:expanded="false"
+    app:title="@string/app_name">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/frag_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:theme="@style/OneUI.ContainedButtonTheme"
+                style="@style/OneUI.ContainedButton"
+                android:id="@+id/selectDirectoryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select dashcam recording directory"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/thresholdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select threshold percentage to delete old footage"
+                android:textStyle="bold"
+                android:layout_below="@id/selectDirectoryButton"
+                android:layout_marginTop="24dp"/>
+
+            <androidx.appcompat.widget.SeslSeekBar
+                android:thumb="@drawable/ic_oui_arrow_down"
+                android:id="@+id/thresholdSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:seslSeekBarMode="expand"
+                android:max="100"
+                android:min="10"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/interval_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select check interval (minutes)"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <androidx.appcompat.widget.SeslSeekBar
+                android:id="@+id/intervalSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/interval_label"
+                android:layout_marginTop="8dp"
+                app:seslSeekBarMode="expand"
+                android:max="180"
+                android:min="1"
+                tools:progress="10" />
+
+            <Button
+                android:id="@+id/startServiceButton"
+                android:theme="@style/OneUI.ContainedButtonTheme"
+                style="@style/OneUI.ContainedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Service"
+                android:layout_below="@id/intervalSeekBar"
+                android:layout_marginTop="36dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</dev.oneuiproject.oneui.layout.ToolbarLayout>
